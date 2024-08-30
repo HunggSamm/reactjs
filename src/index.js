@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const HienNgay = () => {
+  const date = new Date();
+  let ngay = date.getDate();
+  let thang = date.getMonth() + 1;
+  let nam = date.getFullYear();
+  return "Hôm nay là ngày " + ngay + " tháng " + thang + " năm " + nam;
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HienNgay />
   </React.StrictMode>
 );
 
